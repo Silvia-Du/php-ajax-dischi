@@ -81,7 +81,7 @@
       [
         'success' => $success,
         'error' => $error_msg,
-         $discs,
+        'discs' => $discs,
       ]
     );
 

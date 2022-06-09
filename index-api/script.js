@@ -1,10 +1,11 @@
-const app = new Vue ({
+const app = new Vue({
   el: '#app',
 
   data:{
 
     apiUrl: 'http://localhost/php-ajax-dischi/php-ajax-dischi/index-api/api.php',
 
+    cardsData:[],
     
   },
 
@@ -19,10 +20,13 @@ const app = new Vue ({
     getApi(){
       axios.get(this.apiUrl)
       .then(response => {
-        console.log(response.data);
+        this.cardsData = response.data.discs;
+        console.log(this.cardsData);
       })
     }
 
     
   },
 })
+
+//salvo i dati in un data, passo il data in html in v-for per stampare le card
