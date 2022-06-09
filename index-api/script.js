@@ -3,7 +3,7 @@ const app = new Vue({
 
   data:{
 
-    apiUrl: 'http://localhost/php-ajax-dischi/php-ajax-dischi/index-api/api.php',
+    apiUrl: 'http://localhost/php-ajax-dischi/php-ajax-dischi/index-api/api.php?genre=',
 
     cardsData:[],
     genreList: [],
@@ -23,9 +23,10 @@ const app = new Vue({
       .then(response => {
         this.cardsData = response.data.discs;
         
+        
         this.getGenre(this.cardsData)
-
       })
+
     },
 
 
@@ -39,6 +40,12 @@ const app = new Vue({
 
     getGenreApi(){
       console.log(this.selectValue);
+      axios.get(this.apiUrl+this.selectValue)
+      .then(response =>{
+        console.log(response.data.discs);
+        this.cardsData = response.data.discs;
+      })
+
     }
 
   
