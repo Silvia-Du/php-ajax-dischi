@@ -22,8 +22,6 @@ const app = new Vue({
       axios.get(this.apiUrl+this.selectValue)
       .then(response => {
         this.cardsData = response.data.discs;
-        
-        
         // this.getGenre(this.cardsData)
       })
 
