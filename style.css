@@ -19,7 +19,7 @@ header select{
 /* main */
 
 main{
-  /* height: calc(100vh - 75px); */
+  min-height: 100vh;
   background-color: #1e2d3b;
 }
 
@@ -28,7 +28,6 @@ main{
   min-height: 360px;
   color: white;
   background-color: #1e2d3b;
-  border: 1px solid black;
   font-size: 0.9rem;
 }
 

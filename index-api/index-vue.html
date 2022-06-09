@@ -27,7 +27,7 @@
     <header class="d-flex align-items-center justify-content-between px-3 py-2">
     <i class="fa-brands fa-spotify"></i>
 
-    <select @change = "getGenreApi" v-model="selectValue"
+    <select @click="getGenre()" @change = "getApi" v-model="selectValue"
     class="form-select" aria-label="Default select example">
       <option value="">Seleziona un genere</option>
       <option v-for="(genre, index) in genreList"
@@ -38,7 +38,7 @@
     </header>
     <!-- main -->
     <main class="pt-5">
-      <div class="container debug d-flex flex-wrap">
+      <div class="container d-flex flex-wrap">
         <!-- card -->
       
         <div v-for="(card, index) in cardsData" ::key="`card${index}`"

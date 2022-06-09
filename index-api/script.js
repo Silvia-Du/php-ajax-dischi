@@ -19,38 +19,25 @@ const app = new Vue({
   methods:{
 
     getApi(){
-      axios.get(this.apiUrl)
+      axios.get(this.apiUrl+this.selectValue)
       .then(response => {
         this.cardsData = response.data.discs;
         
         
-        this.getGenre(this.cardsData)
+        // this.getGenre(this.cardsData)
       })
 
     },
 
 
-    getGenre(array){
-      array.forEach(disc => {
+    getGenre(){
+      this.cardsData.forEach(disc => {
         if(!this.genreList.includes(disc.genre)){
           this.genreList.push(disc.genre);
         }
       });
     },
-
-    getGenreApi(){
-      console.log(this.selectValue);
-      axios.get(this.apiUrl+this.selectValue)
-      .then(response =>{
-        console.log(response.data.discs);
-        this.cardsData = response.data.discs;
-      })
-
-    }
-
   
-    
-    
   },
 
   

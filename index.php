@@ -41,11 +41,11 @@ include './db_dischi.php';
   </header>
   <!-- main -->
   <main class="pt-5">
-    <div class="container debug d-flex flex-wrap">
+    <div class="container d-flex flex-wrap">
       <!-- card -->
       <?php foreach($discs as $disc): ?>
       
-      <div class="_card debug text-center px-3 pb-0 mb-4">
+      <div class="_card text-center px-3 pb-0 mb-4">
         <div class="card-content pt-3 px-3 mb-4">
           
           <img src="<?php echo $disc['poster'] ?>" alt="img" class="mb-2">
@@ -75,6 +75,6 @@ include './db_dischi.php';
 
 
 
-  <script src="./script.js"></script>
+  <script src="./index-api/script.js"></script>
 </body>
 </html>
