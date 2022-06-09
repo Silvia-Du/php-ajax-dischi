@@ -1,0 +1,29 @@
+.debug{
+  background-color: rgba(165, 42, 42, 0.438);
+}
+
+header{
+  background-color: #2e3a46;
+  height: 75px;
+}
+
+header i{
+  font-size: 2.4rem;
+  color: #34be58;
+}
+
+header select{
+  width: 200px !important;
+}
+
+/* main */
+
+main{
+  height: calc(100vh - 75px);
+  background-color: #1e2d3b;
+}
+
+.container ._card{
+  width: calc(100% / 5);
+  border: 1px solid black;
+}
