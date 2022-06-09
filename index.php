@@ -1,5 +1,8 @@
 <?php 
 
+include './db_dischi.php';
+
+
 ?>
 
 <!DOCTYPE html>
@@ -38,18 +41,23 @@
   </header>
   <!-- main -->
   <main class="pt-5">
-    <div class="container debug d-flex">
+    <div class="container debug d-flex flex-wrap">
       <!-- card -->
-      <div class="_card debug text-center px-3 pb-0">
-        <div class="card-content pb-5 pt-4 px-4 mb-4">
-
-          <img src="https://img.discogs.com/vknPDdrqRbT92pNRX0W4I5N91jg=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1246953-1448927086-6590.jpeg.jpg" alt="img" class="mb-2">
-  
-          <p class="title text-uppercase">Titolo</p>
-          <p class="author mb-0">Autore</p>
-          <p class="year">anno</p>
+      <?php foreach($discs as $disc): ?>
+      
+      <div class="_card debug text-center px-3 pb-0 mb-4">
+        <div class="card-content pt-3 px-3 mb-4">
+          
+          <img src="<?php echo $disc['poster'] ?>" alt="img" class="mb-2">
+          
+          <p class="title text-uppercase"><?php echo $disc['title'] ?></p>
+          <p class="author mb-0"><?php echo $disc['author'] ?></p>
+          <p class="year"><?php echo $disc['year'] ?></p>
         </div>
       </div>
+      
+      <?php endforeach; ?>
+
       <!-- /card -->
       
     </div>

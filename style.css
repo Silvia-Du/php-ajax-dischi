@@ -25,13 +25,19 @@ main{
 
 .container ._card{
   width: calc(100% / 5);
+  min-height: 360px;
   color: white;
   background-color: #1e2d3b;
   border: 1px solid black;
+  font-size: 0.9rem;
 }
 
 .container ._card .card-content{
   background-color: #2e3a46;
+  height: 100%;
+}
+
+.card .title{
 }
 
 ._card .author, .year{
