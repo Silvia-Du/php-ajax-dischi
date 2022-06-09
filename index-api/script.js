@@ -6,6 +6,7 @@ const app = new Vue({
     apiUrl: 'http://localhost/php-ajax-dischi/php-ajax-dischi/index-api/api.php',
 
     cardsData:[],
+    genreList: []
     
   },
 
@@ -22,11 +23,24 @@ const app = new Vue({
       .then(response => {
         this.cardsData = response.data.discs;
         console.log(this.cardsData);
+        this.getGenre(this.cardsData)
+
       })
+    },
+
+
+    getGenre(array){
+      array.forEach(disc => {
+        if(!this.genreList.includes(disc.genre)){
+          this.genreList.push(disc.genre);
+        }
+      });
+      console.log(this.genreList);
     }
+
 
     
   },
 })
 
-//salvo i dati in un data, passo il data in html in v-for per stampare le card
+//estraggo i generi e li ciclo nella select

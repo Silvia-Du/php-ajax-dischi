@@ -17,7 +17,7 @@
 
   <link rel="stylesheet" href="../style.css">
   
-  <title>PHP Ajax Dischi</title>
+  <title>PHP Ajax dischi</title>
 </head>
 <body>
 
@@ -29,8 +29,9 @@
 
     <select class="form-select" aria-label="Default select example">
       <option value="">Seleziona un genere</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option v-for="(genre, index) in genreList"
+      :value=" index + 1 ">{{genre}}</option>
+      
     </select>
 
     </header>
@@ -39,15 +40,15 @@
       <div class="container debug d-flex flex-wrap">
         <!-- card -->
       
-        <div v-for="(disc, index) in cardsData" ::key="`disc${index}`"
+        <div v-for="(card, index) in cardsData" ::key="`card${index}`"
         class="_card debug text-center px-3 pb-0 mb-4">
           <div class="card-content pt-3 px-3 mb-4">
 
-            <img :src="disc.poster" :alt="disc.title" class="mb-2">
+            <img :src="card.poster" :alt="card.title" class="mb-2">
 
-            <p class="title text-uppercase">{{disc.title}}</p>
-            <p class="author mb-0">{{disc.author}}</p>
-            <p class="year">{{disc.year}}</p>
+            <p class="title text-uppercase">{{card.title}}</p>
+            <p class="author mb-0">{{card.author}}</p>
+            <p class="year">{{card.year}}</p>
           </div>
         </div>
 
