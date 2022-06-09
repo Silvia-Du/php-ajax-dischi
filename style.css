@@ -19,7 +19,7 @@ header select{
 /* main */
 
 main{
-  height: calc(100vh - 75px);
+  /* height: calc(100vh - 75px); */
   background-color: #1e2d3b;
 }
 
@@ -35,9 +35,6 @@ main{
 .container ._card .card-content{
   background-color: #2e3a46;
   height: 100%;
-}
-
-.card .title{
 }
 
 ._card .author, .year{

@@ -27,10 +27,11 @@
     <header class="d-flex align-items-center justify-content-between px-3 py-2">
     <i class="fa-brands fa-spotify"></i>
 
-    <select class="form-select" aria-label="Default select example">
+    <select @change = "getGenreApi" v-model="selectValue"
+    class="form-select" aria-label="Default select example">
       <option value="">Seleziona un genere</option>
       <option v-for="(genre, index) in genreList"
-      :value=" index + 1 ">{{genre}}</option>
+      :value="genre">{{genre}}</option>
       
     </select>
 

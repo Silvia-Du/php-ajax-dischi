@@ -6,8 +6,8 @@ const app = new Vue({
     apiUrl: 'http://localhost/php-ajax-dischi/php-ajax-dischi/index-api/api.php',
 
     cardsData:[],
-    genreList: []
-    
+    genreList: [],
+    selectValue: ''
   },
 
   mounted(){
@@ -22,7 +22,7 @@ const app = new Vue({
       axios.get(this.apiUrl)
       .then(response => {
         this.cardsData = response.data.discs;
-        console.log(this.cardsData);
+        
         this.getGenre(this.cardsData)
 
       })
@@ -35,12 +35,16 @@ const app = new Vue({
           this.genreList.push(disc.genre);
         }
       });
-      console.log(this.genreList);
+    },
+
+    getGenreApi(){
+      console.log(this.selectValue);
     }
 
-
+  
+    
     
   },
-})
 
-//estraggo i generi e li ciclo nella select
+  
+})
