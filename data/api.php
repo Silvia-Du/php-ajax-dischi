@@ -1,5 +1,5 @@
 <?php 
-  include __DIR__. './db_dischi.php';
+  require_once __DIR__. './db_dischi.php';
 
   $filteredDiscs=[];
   $genresList=[];

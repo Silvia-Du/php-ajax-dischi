@@ -1,6 +1,6 @@
 <?php 
 
-include  __DIR__.  './data/db_dischi.php';
+require_once  __DIR__.  './data/db_dischi.php';
 
 ?>
 
