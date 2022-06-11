@@ -24,7 +24,6 @@ const app = new Vue({
       }
     })
     .then(response => {
-      console.log(response.data);
       this.genres = response.data.genres;
       this.cardsData = response.data.discs;
     })
